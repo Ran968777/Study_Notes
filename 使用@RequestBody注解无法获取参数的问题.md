@@ -4,7 +4,7 @@
 
 在实际开发的时候,需要对接第三方的接口,他们的接口的数据格式是 json 中 key 有大写的如下图
 
-![image-20200330171155733](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200330171155733.png)
+![image-20200330171155733](imgs/image-20200330171155733.png)
 
 这个时候使用@RequestBody 注解发现会拿不到参数.
 
@@ -16,7 +16,7 @@
 
 使用@JsonProperty 注解
 
-![image-20200330172216783](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20200330172216783.png)
+![image-20200330172216783](imgs/image-20200330172216783.png)
 
 加上这个注解之后，就能成功的从请求体中拿到参数了。但是使用com.alibaba.fastjson.JSON.toJSONString()方法序列化对象时又出现了新的问题。发现序列化的结果又变成了首字母小写的字符串.
 
